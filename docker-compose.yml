@@ -1,13 +1,12 @@
 version: '3'
 services:
   wordpress:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: wordpress:latest
     ports:
-      - "8080:80" # Porta para acessar o WordPress no seu navegador
+      - "8080:80"
     volumes:
       - ./wordpress:/var/www/html
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
     environment:
       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
