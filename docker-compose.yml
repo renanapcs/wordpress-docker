@@ -29,41 +29,6 @@ services:
       - "8081:80"
     environment:
       PMA_ARBITRARY: 1
-      MYSQL_ROOT_PASSWORD: 8fd11ec6cf5e522b
+      MYSQL_ROOT_PASSWORD: senhadb
     depends_on:
       - db
-version: '3'
-services:
-  wordpress:
-    image: wordpress:latest
-    ports:
-      - "8080:80"
-    volumes:
-      - ./wordpress:/var/www/html
-    environment:
-        WORDPRESS_DB_HOST: db
-        WORDPRESS_DB_USER: root
-        WORDPRESS_DB_PASSWORD: senhadb
-        WORDPRESS_DB_NAME: wordpress
-
-    depends_on:
-      - db
-
-  db:
-    image: mysql:5.7
-    volumes:
-      - ./db:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 8fd11ec6cf5e522b
-      MYSQL_DATABASE: wordpress
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8081:80"
-    environment:
-      PMA_ARBITRARY: 1
-      MYSQL_ROOT_PASSWORD: 8fd11ec6cf5e522b
-    depends_on:
-      - db
-
