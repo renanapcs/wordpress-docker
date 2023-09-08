@@ -9,7 +9,7 @@ services:
     environment:
         WORDPRESS_DB_HOST: db
         WORDPRESS_DB_USER: root
-        WORDPRESS_DB_PASSWORD: 8fd11ec6cf5e522b
+        WORDPRESS_DB_PASSWORD: senhadb
         WORDPRESS_DB_NAME: wordpress
 
     depends_on:
@@ -20,7 +20,7 @@ services:
     volumes:
       - ./db:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: 8fd11ec6cf5e522b
+      MYSQL_ROOT_PASSWORD: senhadb
       MYSQL_DATABASE: wordpress
 
   phpmyadmin:
@@ -43,7 +43,7 @@ services:
     environment:
         WORDPRESS_DB_HOST: db
         WORDPRESS_DB_USER: root
-        WORDPRESS_DB_PASSWORD: 8fd11ec6cf5e522b
+        WORDPRESS_DB_PASSWORD: senhadb
         WORDPRESS_DB_NAME: wordpress
 
     depends_on:
